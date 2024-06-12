@@ -1,14 +1,28 @@
 {
-  "name": "react-native-splash-screen",
-  "version": "3.3.0",
+  "name": "@react-native-oh-tpl/react-native-splash-screen",
+  "version": "3.3.0-0.0.1",
   "description": "A splash screen for react-native, hide when application loaded ,it works on iOS and Android.",
+  "harmony": {
+    "alias": "react-native-splash-screen",
+    "codegenConfig": {
+      "specPaths": [
+        "./src"
+      ]
+    }
+  },
+  "overrides": {
+    "@react-native/codegen": "0.74.0"
+  },
+  "dependencies": {
+    "react-native-splash-screen": "3.3.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crazycodeboy/react-native-splash-screen.git"
+    "url": "git+https://github.com/react-native-oh-library/react-native-splash-screen.git"
   },
   "keywords": [
     "react-native",
