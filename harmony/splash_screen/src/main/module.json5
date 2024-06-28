@@ -1,0 +1,7 @@
+{
+  "module": {
+    "name": "splash_screen",
+    type: 'har',
+    deviceTypes: ['default']
+  }
+}
