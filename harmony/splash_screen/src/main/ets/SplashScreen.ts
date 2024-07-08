@@ -63,9 +63,9 @@ export class SplashScreen extends TurboModule implements TM.SplashScreen.Spec {
     this.startWindowIcon = pixelMap;
 
     // 创建子窗口
-    windowStage.createSubWindow("hiSubWindow", (err, data) => {
+    windowStage.createSubWindow("SplashScreenWindow", (err, data) => {
       if (err.code) {
-        Logger.debug('Failed to create the subwindow. Cause: ' + JSON.stringify(err));
+        Logger.error('Failed to create the subwindow. Cause: ' + JSON.stringify(err));
         return;
       }
       this.splashWindow = data;
@@ -76,13 +76,13 @@ export class SplashScreen extends TurboModule implements TM.SplashScreen.Spec {
       // 为子窗口加载对应的目标页面
       this.splashWindow.setUIContent(pageUrl, (err) => {
         if (err.code) {
-          Logger.debug('Failed to load the content. Cause:' + JSON.stringify(err));
+          Logger.error('Failed to load the content. Cause:' + JSON.stringify(err));
           return;
         }
         // 显示子窗口
         this.splashWindow.showWindow((err) => {
           if (err.code) {
-            Logger.debug('Failed to show the window. Cause: ' + JSON.stringify(err));
+            Logger.error('Failed to show the window. Cause: ' + JSON.stringify(err));
             return;
           }
           Logger.debug('Succeeded in showing the window.');
@@ -99,7 +99,7 @@ export class SplashScreen extends TurboModule implements TM.SplashScreen.Spec {
     // 销毁子窗口
     SplashScreen.splashWindow.destroyWindow((err) => {
       if (err.code) {
-        Logger.debug('Failed to destroy the window. Cause: ' + JSON.stringify(err));
+        Logger.error('Failed to destroy the window. Cause: ' + JSON.stringify(err));
         return;
       }
     });
