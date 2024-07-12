@@ -9,6 +9,6 @@
  */
 'use strict';
 
-import { NativeModules } from 'react-native';
-export default NativeModules.SplashScreen;
+import NativeModules from './src/RNSplashScreenModule';
+export default NativeModules;
 
